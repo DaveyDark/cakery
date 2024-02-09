@@ -6,7 +6,7 @@ from models import db
 
 app = Flask(__name__)
 app.secret_key = env.SECRET_KEY
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///freekart.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///cakery.db"
 app.config["UPLOAD_FOLDER"] = env.UPLOAD_FOLDER
 
 db.init_app(app)
