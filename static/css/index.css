@@ -46,8 +46,12 @@ html::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 1rem;
+    padding-inline: 7%;
     position: fixed;
-    padding: 1.4rem 7%;
+    /* padding: 2rem 7%; */
+    /* padding-bottom: 2rem !important; */
+    /* padding-: 2rem; */
     z-index: 999;
 }
 
@@ -72,6 +76,7 @@ html::-webkit-scrollbar-thumb {
     color: var(--black);
     font-weight: bold;
 }
+
 
 .header .navbar a:hover {
     border-bottom: .1rem solid var(--black);
@@ -210,7 +215,7 @@ section {
     display: flex;
     flex-direction: column;
     width: 50rem;
-    background-color: var(--white);
+    background-color: #F5EEE6;
     align-items: center;
     text-align: center;
     padding: 2rem;
@@ -271,7 +276,7 @@ section {
 .blogs .blogs-row .box {
     display: flex;
     align-items: center;
-    background-color: var(--white);
+    background-color: #F5EEE6;
     flex-wrap: wrap;
 }
 
@@ -370,7 +375,7 @@ section {
     margin-bottom: 3rem;
     padding: 3rem;
     border-radius: 3rem;
-    background-color: var(--white);
+    background-color: #F5EEE6;
     box-shadow: var(--box-shadow);
 }
 
@@ -491,7 +496,6 @@ section {
 
 }
 
-/* thanks for watching my video  */
 
 
 
