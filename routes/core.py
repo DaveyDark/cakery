@@ -87,3 +87,7 @@ def register():
             return redirect(url_for('root'))
     return render_template("register.html")
 
+
+@core.get("/design")
+def design():
+    return render_template("design.html")

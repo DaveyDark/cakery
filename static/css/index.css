@@ -524,7 +524,11 @@ section {
 .swiper-button-prev {
     color: var(--black);
 }
-
+.mrzi .swiper-wrapper .swiper-slide .img{
+    height: 120px;
+    border: solid 4px white; 
+    
+}
 
 /* media queries for web responsive */
 

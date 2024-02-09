@@ -1,0 +1,69 @@
+{% extends "base.html" %} {% block title %} Design a Cake {% endblock %} 
+{% block content %}
+<canvas id="three-container"></canvas>
+<label for="shapeSelect">Select a shape:</label>
+<select id="shapeSelect">
+  <option value="Circle" selected>Circle</option>
+  <option value="Square">Square</option>
+  <option value="Rectangle">Rectangle</option>
+  <option value="Heart">Heart</option>
+</select>
+<label for="flavorSelect">Select a flavor:</label>
+<select id="flavorSelect">
+  <option value="Blueberry_Cream">Blueberry</option>
+  <option value="Cheesecake">Cheesecake</option>
+  <option value="Chocolate_cake">Chocolate</option>
+  <option value="Cookies_and_cream">Cookie</option>
+  <option value="Fruit_Cake" selected>Fruit</option>
+  <option value="Icecream">Icecream</option>
+  <option value="Icecream_Cake">Icecream Cake</option>
+  <option value="Mooncake">Mooncake</option>
+  <option value="Oceon_Blue_Cream">Ocean Blue Cream</option>
+  <option value="Purple_Cake">Black Current</option>
+  <option value="Qiiwi_cake">Kiwi</option>
+  <option value="Rainbow_Cake">Mixed</option>
+  <option value="Red_Velvet">Red Velvet</option>
+  <option value="Strawberry_Cake">Strawberry Cake</option>
+  <option value="Strawberry_Cream">Strawberry Cream</option>
+  <option value="Tea_Cake">Cake</option>
+</select>
+<label for="icingSelect">Select an icing:</label>
+<select id="icingSelect">
+  <option value="Cubes">Gems</option>
+  <option value="Flakes">Flakes (Border)</option>
+  <option value="FlakesFull" selected>Flakes (Full)</option>
+  <option value="Flowers">Flowers (Border)</option>
+  <option value="FlowersFull">Flowers (Full)</option>
+  <option value="Roses">Roses</option>
+</select>
+<label for="icingFlavorSelect">Select a icing flavor:</label>
+<select id="icingFlavorSelect">
+  <option value="Blueberry_Cream">Blueberry</option>
+  <option value="Cheesecake">Cheesecake</option>
+  <option value="Chocolate_cake">Chocolate</option>
+  <option value="Cookies_and_cream">Cookie</option>
+  <option value="Fruit_Cake" selected>Fruit</option>
+  <option value="Icecream">Icecream</option>
+  <option value="Icecream_Cake">Icecream Cake</option>
+  <option value="Mooncake">Mooncake</option>
+  <option value="Oceon_Blue_Cream">Ocean Blue Cream</option>
+  <option value="Purple_Cake">Black Current</option>
+  <option value="Qiiwi_cake">Kiwi</option>
+  <option value="Rainbow_Cake">Mixed</option>
+  <option value="Red_Velvet">Red Velvet</option>
+  <option value="Strawberry_Cake">Strawberry Cake</option>
+  <option value="Strawberry_Cream">Strawberry Cream</option>
+  <option value="Tea_Cake">Cake</option>
+</select>
+{% endblock %} 
+{% block script %}
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@v0.161.0/examples/jsm/"
+    }
+  }
+</script>
+<script type="module" src="/static/js/design.js"></script>
+  {% endblock %}
