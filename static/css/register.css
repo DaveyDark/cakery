@@ -262,6 +262,10 @@ section {
     border-radius: 10px;
 }
 
+.navbar{
+    margin-bottom: 0;
+    min-height: 0px;
+}
 .coordField {
     border: none;
 }
@@ -283,7 +287,9 @@ section {
     color: white;
     background-color: var(--darker-beige);
 }
-
+#buyerRegisteration{
+    margin-top: 50px;
+}
 
 
 
