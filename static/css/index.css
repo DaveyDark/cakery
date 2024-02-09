@@ -529,6 +529,9 @@ section {
     border: solid 4px white; 
     
 }
+.newbox{
+    height: 4000px;
+}
 
 /* media queries for web responsive */
 
