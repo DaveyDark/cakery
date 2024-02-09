@@ -1,0 +1,176 @@
+{% extends "base.html" %} {% block title %} Register {% endblock %} {% block
+head %}<link
+  rel="stylesheet"
+  href="static\css\register.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="toggled-search-bar.css" />
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<script src="static\css\register.css"></script>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""
+/>
+<script
+  src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""
+></script>
+{% endblock %} {% block content %}
+<section class="buyerRegisteration" id="buyerRegisteration">
+        <div class="homecontent" id="divHomeBuyer">
+            <h2 class="h">Join as a customer
+            </h2>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et
+                dolore magna aliqua.</p>
+        </div>
+        <div class="homecontent" id="divMapBuyer"></div>
+        <div class="buyerFormContainer">
+            <form action="#" method="post">
+                <input type="hidden" name="form_id" value="buyer">
+                <span class="formRow">
+                  <label for="name">Name :</label>
+                  <input type="text" id="inputName" name="name"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="email">Email :</label>
+                  <input type="email" id="inputEmail" name="email"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="phone">Phone :</label>
+                  <input id="inputPhone" name="phone"></input><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="password">Password :</label>
+                  <input type="password" id="inputPassword" name="password"><br><br>
+                </span>
+
+                <span class="formRow">
+                <label for="states">State:</label>
+                <select name="state" class="states">
+                  <option value="" disabled selected>Select State</option>
+                </select>
+                </span>
+
+                <span class="formRow">
+                <label for="cities">City:</label>
+                <select name="city" class="cities">
+                  <option value="" disabled selected>Select City</option>
+                </select>
+                </span>
+
+                <span class="formRow">
+                  <label for="location">Location :</label>
+                  <input type="text" readonly id="inputLatitudeBuyer" name="latitude"><br><br>
+                  <input type="text" readonly id="inputLongitudeBuyer" name="longitude"><br><br>
+                </span>
+                <span class="formRow">
+                    <a id="locationLinkBuyer" class="locLink">Use my current location</a>
+                </span>
+                <span class="formRow">
+                    <a id="mapLinkBuyer" class="locLink">Open Map</a>
+                </span>
+                <span class="formRow">
+                  <input type="submit" class="submitBtn" id="btnSubmit" value="Register">
+            </form>
+        </div>
+    </section>
+
+    <section class="sellerRegisteration" id="sellerRegisteration">
+        <div class="sellerFormContainer">
+            <form action="#" method="post">
+                <input type="hidden" name="form_id" value="seller">
+                <span class="formRow">
+                  <label for="name">Name :</label>
+                  <input type="text" id="inputName" name="name"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="email">Email :</label>
+                  <input type="email" id="inputEmail" name="email"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="phone">Phone :</label>
+                  <input id="inputPhone" name="phone"></input><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="password">Password :</label>
+                  <input type="password" id="inputPassword" name="password"><br><br>
+                </span>
+
+
+                <span class="formRow">
+                  <label for="shopName">Shop Name :</label>
+                  <input id="inputShopName" name="shopName"></input><br><br>
+                </span>
+
+                <span class="formRow">
+                <label for="states">State:</label>
+                <select name="state" class="states">
+                  <option value="" disabled selected>Select State</option>
+                </select>
+                </span>
+
+                <span class="formRow">
+                <label for="cities">City:</label>
+                <select name="city" class="cities">
+                  <option value="" disabled selected>Select City</option>
+                </select>
+                </span>
+                <span class="formRow">
+                <label for="category">Category:</label>
+                <select name="category" class="categoryDD">
+                  <option value="bakery" >Bakery</option>
+                  <option value="stationary" >Stationary</option>
+                  <option value="household" >Household</option>
+                  <option value="gadgets" >Gadgets</option>
+                </select>
+                </span>
+                <span class="formRow">
+                  <label for="location">Location :</label>
+                  <input type="text" readonly id="inputLatitudeSeller" name="latitude"><br><br>
+                  <input type="text" readonly id="inputLongitudeSeller" name="longitude"><br><br>
+                </span>
+                <span class="formRow">
+                    <a id="locationLinkSeller" class="locLink">Use my current location</a>
+                </span>
+                <span class="formRow">
+                    <a id="mapLinkSeller" class="locLink">Open Map</a>
+                </span>
+
+                <span class="formRow">
+                  <input type="submit" class="submitBtn" id="btnSubmit" value="Register">
+            </form>
+        </div>
+        <div class="homecontent" id="divHomeSeller">
+            <h2 class="h">Join as a Seller
+            </h2>
+            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et
+                dolore magna aliqua.</p>
+        </div>
+        <div class="homecontent" id="divMapSeller"></div>
+    </section>
+ {% endblock %}
