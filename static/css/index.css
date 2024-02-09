@@ -276,7 +276,7 @@ section {
 .blogs .blogs-row .box {
     display: flex;
     align-items: center;
-    background-color: var(--white);
+    background-color: #F5EEE6;
     flex-wrap: wrap;
 }
 
@@ -375,7 +375,7 @@ section {
     margin-bottom: 3rem;
     padding: 3rem;
     border-radius: 3rem;
-    background-color: var(--white);
+    background-color: #F5EEE6;
     box-shadow: var(--box-shadow);
 }
 
@@ -496,7 +496,6 @@ section {
 
 }
 
-/* thanks for watching my video  */
 
 
 
