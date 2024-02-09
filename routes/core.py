@@ -11,3 +11,8 @@ def root():
 @core.route("/registration")
 def registration():
     return render_template("register.html")
+
+
+@core.get("/design")
+def design():
+    return render_template("design.html")
