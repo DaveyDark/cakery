@@ -58,7 +58,7 @@ def register():
             byr = Buyer(email, name, password, latitude, longitude, state, city, phone)
             db.session.add(byr)
             db.session.commit()
-            return redirect(url_for("root"))
+            return redirect(url_for("core.login"))
         else:
             # seller form
             email = request.form["email"]
@@ -110,7 +110,7 @@ def register():
             )
             db.session.add(sllr)
             db.session.commit()
-            return redirect(url_for("root"))
+            return redirect(url_for("core.login"))
     return render_template("register.html")
 
 
@@ -118,6 +118,25 @@ def register():
 def design():
     return render_template("design.html")
 
-@core.route("/login")
+@core.route("/login",methods=["GET", "POST"])
+#login page route
 def login():
+    if request.method == "POST":
+        #check login info
+        email = request.form["email"]
+        password = request.form["password"]
+        usr = Buyer.query.filter_by(email=email).first()
+        type = 'b'
+        if not usr:
+            usr = Seller.query.filter_by(email=email).first()
+            type = 's'
+        if not usr:
+            return redirect(url_for('core.register'))
+        if(usr.password == password):
+            session["name"] = usr.name
+            session["email"] = usr.email
+            session["type"] = type
+            return redirect(url_for('core.root'))
+        else:
+            return redirect(url_for('core.register'))
     return render_template("login.html")
