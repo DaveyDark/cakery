@@ -118,25 +118,26 @@ def register():
 def design():
     return render_template("design.html")
 
-@core.route("/login",methods=["GET", "POST"])
-#login page route
+
+@core.route("/login", methods=["GET", "POST"])
+# login page route
 def login():
     if request.method == "POST":
-        #check login info
+        # check login info
         email = request.form["email"]
         password = request.form["password"]
         usr = Buyer.query.filter_by(email=email).first()
-        type = 'b'
+        type = "b"
         if not usr:
             usr = Seller.query.filter_by(email=email).first()
-            type = 's'
+            type = "s"
         if not usr:
-            return redirect(url_for('core.register'))
-        if(usr.password == password):
+            return redirect(url_for("core.register"))
+        if usr.password == password:
             session["name"] = usr.name
             session["email"] = usr.email
             session["type"] = type
-            return redirect(url_for('core.root'))
+            return redirect(url_for("core.root"))
         else:
-            return redirect(url_for('core.register'))
+            return redirect(url_for("core.register"))
     return render_template("login.html")
