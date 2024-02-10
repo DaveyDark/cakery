@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block title %} Login {% endblock %} {% block head
+%}
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+/>
+<link rel="stylesheet" href="toggled-search-bar.css" />
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+/>
+<link
+  rel="stylesheet"
+  href="static\css\login.css"
+/>
+{% endblock %} {% block content %}
+<section class="login" id="login">
+        <div class="homecontent">
+            <h2 id="h">LocaLite
+            </h2>
+            <p id="para">Bringing people together, locally</p>
+        </div>
+        <div class="buyerFormContainer">
+            <form action="#" method="post">
+                <span class="formRow">
+                  <label for="email">Email :</label>
+                  <input type="email" id="inputEmail" name="email"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <label for="password">Password :</label>
+                  <input type="password" id="inputPassword" name="password"><br><br>
+                </span>
+
+                <span class="formRow">
+                  <input type="submit" id="btnSubmit" value="Login">
+            </form>
+        </div>
+
+    </section>
+    <section id="signUp">
+        <p id="pRegisterText">Haven't joined us yet?</p>
+        <div id="divRegisterContentContainer">
+            <a class="registerButton" id="btnRegisterSelf" href="{{ url_for('core.register') }}#buyerRegisteration">Register as Buyer</a>
+            <a class="registerButton" id="btnRegisterStore" href="{{ url_for('core.register') }}#sellerRegisteration">Register as Seller</a>
+        </div>
+    </section>
+
+    {% endblock %}
+ 

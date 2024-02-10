@@ -117,3 +117,7 @@ def register():
 @core.get("/design")
 def design():
     return render_template("design.html")
+
+@core.route("/login")
+def login():
+    return render_template("login.html")
