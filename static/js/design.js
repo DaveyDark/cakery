@@ -11,6 +11,32 @@ const icings = [
   "FlakesFull",
   "Cubes",
 ];
+const icingChoices = [
+  "CircleRoses",
+  "CircleFlowers",
+  "CircleFlowersFull",
+  "CircleFlakes",
+  "CircleFlakesFull",
+  "CircleCubes",
+  "SquareRoses",
+  "SquareFlowers",
+  "SquareFlowersFull",
+  "SquareFlakes",
+  "SquareFlakesFull",
+  "SquareCubes",
+  "RectangleRoses",
+  "RectangleFlowers",
+  "RectangleFlowersFull",
+  "RectangleFlakes",
+  "RectangleFlakesFull",
+  "RectangleCubes",
+  "HeartRoses",
+  "HeartFlowers",
+  "HeartFlowersFull",
+  "HeartFlakes",
+  "HeartFlakesFull",
+  "HeartCubes",
+];
 
 const loader = new GLTFLoader();
 
@@ -21,10 +47,11 @@ const renderer = new THREE.WebGLRenderer({
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff); // 0xffffff is white in hexadecimal RGB
 const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-const light = new THREE.AmbientLight(0xffffff);
+const light = new THREE.AmbientLight(0xffffff, 2);
 scene.add(light);
-camera.position.z = 0.5;
-camera.rotateY(45);
+camera.position.z = 0.35;
+camera.position.y = 0.35;
+camera.rotateX(THREE.MathUtils.degToRad(90));
 renderer.setSize(500, 500);
 const controls = new OrbitControls(camera, renderer.domElement);
 
@@ -97,6 +124,24 @@ animate();
 
 document.getElementById("shapeSelect").addEventListener("change", () => {
   showObjectByName(document.getElementById("shapeSelect").value, shapes, model);
+  const icing =
+    document.getElementById("shapeSelect").value +
+    document.getElementById("icingSelect").value;
+
+  showObjectByName(icing, icingChoices, model);
+
+  changeObjectMaterial(
+    document.getElementById("shapeSelect").value,
+    document.getElementById("flavorSelect").value,
+    model,
+  );
+
+  changeObjectMaterial(
+    document.getElementById("shapeSelect").value +
+      document.getElementById("icingSelect").value,
+    document.getElementById("icingFlavorSelect").value,
+    model,
+  );
 });
 document.getElementById("flavorSelect").addEventListener("change", () => {
   changeObjectMaterial(
@@ -106,15 +151,9 @@ document.getElementById("flavorSelect").addEventListener("change", () => {
   );
 });
 document.getElementById("icingSelect").addEventListener("change", () => {
-  let icingChoices = icings.map(
-    (i) => document.getElementById("shapeSelect").value + i,
-  );
   const icing =
     document.getElementById("shapeSelect").value +
     document.getElementById("icingSelect").value;
-
-  console.log(icing);
-  console.log(icingChoices);
 
   showObjectByName(icing, icingChoices, model);
 });

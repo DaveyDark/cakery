@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .update();
     map.flyTo([position.coords.latitude, position.coords.longitude], 13);
     mapSeller.flyTo([position.coords.latitude, position.coords.longitude], 13);
+
     locLinkBuyer.innerHTML = "Use my current location";
     locLinkSeller.innerHTML = "Use my current location";
   }

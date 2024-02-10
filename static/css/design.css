@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  margin: 10rem 0;
+  grid-template-columns: repeat(2, 1fr);
+}
+#three-container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem;
+  margin: auto;
+}
+
+.controls select {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  outline: none;
+  width: 30rem;
+}
