@@ -313,30 +313,13 @@ hr {
 
     }
 
-    .header .navbar {
-        position: absolute;
-        top: 100px;
-        right: -100%;
-        width: 25rem;
-        color: var(--black);
-        background-color: #fff9eb;
-        height: 00vh;
-    }
-
-    .header .navbar.active {
-        right: 0;
-    }
-
-    .header .navbar a {
-        display: block;
-        font-size: 2rem;
-        color: black;
-        margin: 1.5rem;
-    }
-}
-
+    \
 @media (max-width:600px) {
     html {
         font-size: 50%;
     }
+}
+
+.navbar{
+    padding-top: 25px !important;
 }
