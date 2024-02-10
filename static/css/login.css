@@ -304,10 +304,19 @@ hr {
         display: inline-block;
 
     }
+<<<<<<< HEAD
+
+    \
+=======
 }
 
+>>>>>>> c859916d2e20017e93fb1ba84491c5cd2df6b3f9
 @media (max-width:600px) {
     html {
         font-size: 50%;
     }
+}
+
+.navbar{
+    padding-top: 25px !important;
 }
